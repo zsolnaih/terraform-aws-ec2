@@ -37,3 +37,9 @@ variable "instance_profile" {
   type = string
   default = null
 }
+
+variable "user_data_base64" {
+  description = "Base64-encoded user data script to be passed to the EC2 instance at launch. If null, no user data is applied."
+  type = string
+  default = null
+}

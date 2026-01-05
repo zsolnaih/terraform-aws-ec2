@@ -33,6 +33,7 @@ resource "aws_instance" "this" {
   instance_type           = var.instance_type
   iam_instance_profile    = try(aws_iam_instance_profile.ssm_profile[0].name, var.instance_profile, null)
   subnet_id               = var.subnet_id
+  user_data_base64        = var.user_data_base64 
   vpc_security_group_ids  = var.sg
 
   tags = {

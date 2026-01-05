@@ -57,6 +57,7 @@ No modules.
 | `subnet_id`        | Subnet ID where the EC2 instance will be launched                                    | `string`       | `null`       | yes      |
 | `sg`               | List of security group IDs attached to the instance                                  | `list(string)` | `null`       | no       |
 | `instance_profile` | Existing IAM instance profile name. If set, no SSM role is created                   | `string`       | `null`       | no       |
+| `user_data_base64` | Base64-encoded user data script to be passed to the EC2 instance at launch. If null, no user data is applied.| `string`       | `null`       | no       |
 
 ---
 
